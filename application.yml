@@ -1,0 +1,23 @@
+logging:
+  level:
+    ROOT: ERROR
+    com.balkirat: DEBUG
+    org.springframework:
+      boot.context.config: ERROR
+      web: ERROR
+      data: ERROR
+      transaction: ERROR
+      jms: ERROR
+
+pattern:
+  console: "%d %-5level %logger : %msg%n"
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
