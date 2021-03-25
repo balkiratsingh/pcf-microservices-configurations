@@ -17,6 +17,8 @@ spring:
 transaction:
   queue: transaction.message.queue
   
+server.port: 8081
+  
 ---
 spring:
   profiles: test
