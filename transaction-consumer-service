@@ -14,7 +14,7 @@ spring:
       dialext: org.hibernate.dialect.MySQL8Dialect
       ddl-auto: update
       
-transacttion:
+transaction:
   queue: transaction.message.queue
   
 ---
