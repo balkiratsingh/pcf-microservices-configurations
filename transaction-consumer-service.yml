@@ -4,6 +4,12 @@ spring:
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:password}
     driverClassName: com.mysql.cj.jdbc.Driver
+    
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
 
   activemq:
     broker-url: ${ACTIVE_MQ_HOST:tcp://localhost:61616}
