@@ -22,8 +22,6 @@ spring:
       
 transaction:
   queue: transaction.message.queue
-
-transaction:
   topic: transaction
   
 total:
