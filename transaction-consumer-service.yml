@@ -8,8 +8,8 @@ spring:
   kafka:
     producer:
       bootstrap-servers: localhost:9092
-      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
   activemq:
     broker-url: ${ACTIVE_MQ_HOST:tcp://localhost:61616}
@@ -22,6 +22,12 @@ spring:
       
 transaction:
   queue: transaction.message.queue
+
+transaction:
+  topic: transaction
+  
+total:
+  amount: 500
   
 server.port: 8081
   
