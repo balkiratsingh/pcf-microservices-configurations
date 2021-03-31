@@ -1,10 +1,37 @@
-
 spring:
   datasource:
     url:  jdbc:mysql://${MYSQL_CONTAINER_NAME:localhost}:3306/${MYSQL_DATABASE:hold_release_area}
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:password}
     driverClassName: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    show-sql: true
 
 server:
   port: 8083
+
+api:
+  title: "Reference-REST-Service"
+  description: "RestFul Service"
+  version: 1.0
+  terms-of-service-url: "https://www.fullstacklabs.ca/tos"
+  contact: "cheemaballu@gmail.com"
+  email: cheemaballu@gmail.com
+  url: https://balkiratsingh.com/
+  license: "Full Stack Labs API License"
+  license-url: https://www.fullstacklabs.ca
+  
+logging:
+  level:
+    ROOT: ERROR
+    com.balkirat: DEBUG
+    org.springframework:
+            boot.context.config: DEBUG
+            web: DEBUG
+            data: DEBUG
+            
+management:
+  endpoint:
+    health:
+      show-details: always 
