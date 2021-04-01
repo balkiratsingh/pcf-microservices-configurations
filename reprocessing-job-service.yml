@@ -8,6 +8,12 @@ spring:
     password: ${DB_PASSWORD:password}
     driverClassName: com.mysql.cj.jdbc.Driver
     
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      
   jpa:
     show-sql: true
     
